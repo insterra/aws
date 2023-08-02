@@ -93,8 +93,9 @@ module "service_postgresql" {
   credential = {
     username = module.database_postgresql.username
     password = module.database_postgresql.password
-    database = module.database_postgresql.db_name
+    resource = module.database_postgresql.db_name
     host     = module.database_postgresql.address
     port     = module.database_postgresql.port
+    secure   = true
   }
 }
