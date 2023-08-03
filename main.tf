@@ -113,6 +113,7 @@ module "cluster_foundation_basic" {
   provider_name   = var.provider_name
   cluster_address = module.foundation_basic.cluster_address
   password_token  = module.foundation_basic.trust_token
+  uplink_channel  = "develop"
 
   bootstrap_node = module.foundation_basic.bootstrap_node
   nodes          = module.foundation_basic.nodes
@@ -127,6 +128,7 @@ module "cluster_compute_basic" {
   provider_name   = var.provider_name
   cluster_address = module.compute_basic.cluster_address
   password_token  = module.compute_basic.trust_token
+  uplink_channel  = "develop"
 
   bootstrap_node = module.compute_basic.bootstrap_node
   nodes          = module.compute_basic.nodes
