@@ -92,7 +92,7 @@ provider "instellar" {
   auth_token = var.instellar_auth_token
 }
 
-module "storage" {
+module "link_storage_s3" {
   source  = "upmaru/bootstrap/instellar//modules/storage"
   version = "~> 0.5"
 
@@ -104,7 +104,7 @@ module "storage" {
   secret_key = module.storage_s3.secret_access_key
 }
 
-module "cluster_foundation_basic" {
+module "link_foundation_basic" {
   source  = "upmaru/bootstrap/instellar"
   version = "~> 0.5"
 
@@ -119,7 +119,7 @@ module "cluster_foundation_basic" {
   nodes          = module.foundation_basic.nodes
 }
 
-module "cluster_compute_basic" {
+module "link_compute_basic" {
   source  = "upmaru/bootstrap/instellar"
   version = "~> 0.5"
 
@@ -134,7 +134,7 @@ module "cluster_compute_basic" {
   nodes          = module.compute_basic.nodes
 }
 
-module "service_postgresql" {
+module "link_database_postgresql" {
   source  = "upmaru/bootstrap/instellar//modules/service"
   version = "~> 0.5"
 
@@ -144,8 +144,8 @@ module "service_postgresql" {
   driver_version = "15"
 
   cluster_ids = [
-    module.cluster_foundation_basic.cluster_id,
-    module.cluster_compute_basic.cluster_id
+    module.link_foundation_basic.cluster_id,
+    module.link_compute_basic.cluster_id
   ]
 
   channels = ["develop", "master"]
