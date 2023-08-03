@@ -17,9 +17,9 @@ This is a catalog of all the supported `blocks` for insterra.
     - [x] Bastion Node
     - [x] Bootstrap Node
     - [x] Expandable Compute Topology
-  - [x] Reference network from `Foundation Cluster`
+  - [x] Reference network from `Foundation`
 - [x] Database
-  - [x] Reference network from `Foundation Cluster`
+  - [x] Reference network from `Foundation`
 
 ## Instellar Resources
 
@@ -29,7 +29,6 @@ This is a catalog of all the supported `blocks` for insterra.
   - [x] Compute Cluster
 - [x] Component
   - [x] Postgresql Service
-
 
 ### Running Terraform
 
