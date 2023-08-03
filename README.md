@@ -1,24 +1,35 @@
-# AWS Compute
+# AWS Catalog
 
-Terraform module template for AWS and instellar.app. Click `Use this template` and set it up on your organization.
+This is a catalog of all the supported `blocks` for insterra.
 
-This module will setup networking and compute on AWS and automatically add the cluster to instellar.app. This is a fully automated workflow for managing your infrastructure with instellar.
+## AWS Resources
 
-## Basic Usage via CLI
+- [x] Storage
+  - [x] S3 Bucket
+- [x] Foundation
+  - [x] VPC
+  - [x] Cluster
+    - [x] Bastion Node
+    - [x] Bootstrap Node
+    - [x] Expandable Compute Topology
+- [x] Compute
+  - [x] Cluster
+    - [x] Bastion Node
+    - [x] Bootstrap Node
+    - [x] Expandable Compute Topology
+  - [x] Reference network from `Foundation Cluster`
+- [x] Database
+  - [x] Reference network from `Foundation Cluster`
 
-Once you've cloned this repo, add a `.auto.tfvars` file. This file will automatically be ignored and not checked into your repository.
+## Instellar Resources
 
-You can then fill it with the following
+- [x] Storage
+- [x] Cluster
+  - [x] Foundation Cluster
+  - [x] Compute Cluster
+- [x] Component
+  - [x] Postgresql Service
 
-```hcl
-aws_access_key = <your aws access key>
-aws_secret_key = <your aws secret key>
-instellar_auth_token = <your instellar auth token>
-```
-
-You can then replace the `cluster_name` inside the `main.tf` file and the `ssh_keys` fingerprint with the one from your AWS console. You can get the ssh key name from [this page](https://us-west-2.console.aws.amazon.com/ec2/home?region=us-west-2#KeyPairs:) of your aws account. Be sure to switch to the correct region.
-
-The `node_size` parameter and `size` parameter under `cluster_topology` can also be changed depending on how much load you will anticipate.
 
 ### Running Terraform
 
