@@ -28,8 +28,6 @@ module "foundation_basic" {
   node_size  = "t3a.medium"
 
   cluster_topology = [
-    // replace name of node with anything you like
-    // you can use 01, 02 also to keep it simple.
     { id = 1, name = "01", size = "t3a.medium" },
     { id = 2, name = "02", size = "t3a.medium" },
   ]
@@ -51,8 +49,6 @@ module "compute_basic" {
   node_size  = "t3a.medium"
 
   cluster_topology = [
-    // replace name of node with anything you like
-    // you can use 01, 02 also to keep it simple.
     { id = 1, name = "01", size = "t3a.medium" },
     { id = 2, name = "02", size = "t3a.medium" },
   ]
@@ -94,6 +90,18 @@ variable "instellar_auth_token" {}
 provider "instellar" {
   host       = var.instellar_host
   auth_token = var.instellar_auth_token
+}
+
+module "storage" {
+  source  = "upmaru/bootstrap/instellar//modules/storage"
+  version = "~> 0.5"
+
+  bucket = module.storage_s3.name
+  region = var.aws_region
+  host   = module.storage_s3.host
+
+  access_key = module.storage_s3.access_key_id
+  secret_key = module.storage_s3.secret_access_key
 }
 
 module "cluster_foundation_basic" {
