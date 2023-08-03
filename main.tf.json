@@ -60,7 +60,7 @@
       "source": "upmaru/instellar/aws//modules/database",
       "version": "~> 0.5",
       "identifier": "perceptual",
-      "db_size": "db.t3.medium",
+      "db_size": "db.t3.small",
       "db_name": "instellardb",
       "db_username": "instellar",
       "engine": "postgres",
