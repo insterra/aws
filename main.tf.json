@@ -38,7 +38,10 @@
       ],
       "volume_type": "gp3",
       "storage_size": 40,
-      "ssh_keys": []
+      "ssh_keys": [
+        "zack-studio",
+        "zack-one-eight"
+      ]
     },
     "compute_basic": {
       "source": "upmaru/instellar/aws",
@@ -54,7 +57,10 @@
       ],
       "volume_type": "gp3",
       "storage_size": 40,
-      "ssh_keys": []
+      "ssh_keys": [
+        "zack-studio",
+        "zack-one-eight"
+      ]
     },
     "database_postgresql": {
       "source": "upmaru/instellar/aws//modules/database",
