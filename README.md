@@ -2,6 +2,8 @@
 
 This is a catalog of all the supported `blocks` for insterra. The format for these catalogs should be `tf.json` so they can be easily parsed by `insterra`.
 
+![AWS logo](logo.svg)
+
 ## AWS Resources
 
 - [x] Storage
