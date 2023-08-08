@@ -1,49 +1,8 @@
 {
   "name": "aws-bootstrap",
-  "presets": [
-    {
-      "module_name": "upmaru/instellar/aws//modules/storage",
-      "category_name": "storage",
-      "service": "s3",
-      "tier": "production",
-      "name": "base-storage",
-      "attributes": {}
-    },
-    {
-      "module_name": "upmaru/instellar/aws",
-      "category_name": "foundation",
-      "service": "ec2",
-      "tier": "production",
-      "name": "foundation-starter",
-      "attributes": {
-        "identifier": null,
-        "node_size": "t3a.medium",
-        "cluster_topology": [
-          {"id": 1, "name": "01", "size": "t3a.medium"},
-          {"id": 2, "name": "02", "size": "t3a.medium"}
-        ],
-        "volume_type": "gp3",
-        "storage_size": 40,
-        "ssh_keys": []
-      }
-    },
-    {
-      "module_name": "upmaru/instellar/aws//modules/database",
-      "category_name": "database",
-      "service": "postgresql",
-      "tier": "development",
-      "name": "postgresql-starter",
-      "attributes":  {
-        "identifier": null,
-        "db_size": "db.t3.small",
-        "db_name": "instellardb",
-        "engine": "postgres",
-        "engine_version": "15",
-        "port": 5432,
-        "db_username": "instellar",
-        "deletion_protection": false,
-        "skip_final_snapshot": true
-      }
-    }
+  "preset_names": [
+    "base-storage",
+    "foundation-starter",
+    "postgresql-starter"
   ]
 }
