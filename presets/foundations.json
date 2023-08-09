@@ -2,7 +2,7 @@
   {
     "module_name": "upmaru/instellar/aws",
     "category_name": "foundation",
-    "service": "ec2",
+    "services": ["ec2"],
     "tier": "production",
     "name": "starter",
     "attributes": {

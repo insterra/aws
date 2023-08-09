@@ -2,7 +2,7 @@
   {
     "module_name": "upmaru/instellar/aws//modules/database",
     "category_name": "database",
-    "service": "postgresql",
+    "services": ["postgresql", "rds"],
     "tier": "development",
     "name": "postgresql-starter",
     "attributes":  {

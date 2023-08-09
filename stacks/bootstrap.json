@@ -1,7 +1,9 @@
 {
   "name": "aws-bootstrap",
-  "preset_names": [
-    "base-storage",
+  "preset_references": [
+    {"category_name": "storage", "name": "base"},
+    {"category_name": "foundation", "name": "starter"},
+    
     "foundation-starter",
     "postgresql-starter"
   ]

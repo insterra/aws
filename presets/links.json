@@ -2,7 +2,7 @@
   {
     "module_name": "upmaru/bootstrap/instellar//modules/storage",
     "category_name": "link",
-    "service": "instellar",
+    "services": ["s3"],
     "tier": "production",
     "name": "storage",
     "attributes": {}
@@ -10,7 +10,7 @@
   {
     "module_name": "upmaru/bootstrap/instellar",
     "category_name": "link",
-    "service": "instellar",
+    "services": ["ec2"],
     "tier": "development",
     "name": "compute-development",
     "attributes": {
@@ -20,7 +20,7 @@
   {
     "module_name": "upmaru/bootstrap/instellar",
     "category_name": "link",
-    "service": "instellar",
+    "services": ["ec2"],
     "tier": "production",
     "name": "compute-production",
     "attributes": {}
@@ -28,7 +28,7 @@
   {
     "module_name": "upmaru/bootstrap/instellar//modules/service",
     "category_name": "link",
-    "service": "instellar",
+    "services": ["rds", "postgresql"],
     "tier": "development",
     "name": "postgresql-development",
     "attributes": {
@@ -39,7 +39,7 @@
   {
     "module_name": "upmaru/bootstrap/instellar//modules/service",
     "category_name": "link",
-    "service": "instellar",
+    "services": ["rds", "postgresql"],
     "tier": "production",
     "name": "postgresql-production",
     "attributes": {
