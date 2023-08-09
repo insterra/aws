@@ -1,8 +1,0 @@
-{
-  "module_name": "upmaru/instellar/aws//modules/storage",
-  "category_name": "storage",
-  "service": "s3",
-  "tier": "production",
-  "name": "base-storage",
-  "attributes": {}
-}

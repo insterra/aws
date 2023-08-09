@@ -1,0 +1,20 @@
+[
+  {
+    "module_name": "upmaru/instellar/aws",
+    "category_name": "foundation",
+    "service": "ec2",
+    "tier": "production",
+    "name": "starter",
+    "attributes": {
+      "identifier": null,
+      "node_size": "t3a.medium",
+      "cluster_topology": [
+        {"id": 1, "name": "01", "size": "t3a.medium"},
+        {"id": 2, "name": "02", "size": "t3a.medium"}
+      ],
+      "volume_type": "gp3",
+      "storage_size": 40,
+      "ssh_keys": []
+    }
+  }
+]

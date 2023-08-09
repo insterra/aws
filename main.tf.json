@@ -4,6 +4,7 @@
     "provider_name": {
       "default": "aws"
     },
+    "db_version": {},
     "aws_region": {},
     "aws_access_key": {},
     "aws_secret_key": {},
@@ -70,7 +71,7 @@
       "db_name": "instellardb",
       "db_username": "instellar",
       "engine": "postgres",
-      "engine_version": "15",
+      "engine_version": "${var.db_version}",
       "port": 5432,
       "subnet_ids": "${module.foundation_basic.public_subnet_ids}",
       "security_group_ids": [
@@ -120,7 +121,7 @@
       "slug": "${module.database_postgresql.identifier}",
       "provider_name": "${var.provider_name}",
       "driver": "database/postgresql",
-      "driver_version": "15",
+      "driver_version": "${var.db_version}",
       "cluster_ids": [
         "${module.link_foundation_basic.cluster_id}",
         "${module.link_compute_basic.cluster_id}"
