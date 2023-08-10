@@ -6,7 +6,6 @@
     "tier": "development",
     "name": "postgresql-starter",
     "attributes":  {
-      "identifier": null,
       "db_size": "db.t3.small",
       "db_name": "instellardb",
       "engine": "postgres",

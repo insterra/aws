@@ -6,7 +6,6 @@
     "tier": "production",
     "name": "starter",
     "attributes": {
-      "identifier": null,
       "node_size": "t3a.medium",
       "cluster_topology": [
         {"id": 1, "name": "01", "size": "t3a.medium"},
