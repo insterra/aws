@@ -28,22 +28,24 @@
   {
     "module_name": "upmaru/bootstrap/instellar//modules/service",
     "category_name": "link",
-    "services": ["rds", "postgresql"],
+    "services": ["postgresql", "rds"],
     "tier": "development",
-    "name": "postgresql-development",
+    "name": "postgresql-dev",
     "attributes": {
       "driver": "database/postgresql",
+      "driver_version": null,
       "channels": []
     }
   },
   {
     "module_name": "upmaru/bootstrap/instellar//modules/service",
     "category_name": "link",
-    "services": ["rds", "postgresql"],
+    "services": ["postgresql", "rds"],
     "tier": "production",
-    "name": "postgresql-production",
+    "name": "postgresql-prod",
     "attributes": {
       "driver": "database/postgresql",
+      "driver_version": null,
       "channels": ["main", "master"]
     }
   }

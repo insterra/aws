@@ -3,8 +3,7 @@
   "preset_references": [
     {"category_name": "storage", "name": "base"},
     {"category_name": "foundation", "name": "starter"},
-    
-    "foundation-starter",
-    "postgresql-starter"
+    {"category_name": "compute", "name": "starter"},
+    {"category_name": "database", "name": "postgresql-starter"}
   ]
 }

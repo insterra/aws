@@ -4,7 +4,7 @@
     "category_name": "compute",
     "services": ["ec2"],
     "tier": "production",
-    "name": "compute-starter",
+    "name": "starter",
     "attributes": {
       "identifier": null,
       "node_size": "t3a.medium",

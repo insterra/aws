@@ -31,7 +31,10 @@
     "foundation_network": {
       "source": "upmaru/instellar/aws//modules/network",
       "version": "~> 0.6",
-      "identifier": "${var.identifier}"
+      "identifier": "${var.identifier}",
+      "region": "${var.aws_region}",
+      "vpc_ip_range": "10.0.0.0/16",
+      "public_subnet_cidrs": ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
     },
     "compute_primary": {
       "source": "upmaru/instellar/aws",
