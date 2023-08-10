@@ -1,6 +1,6 @@
 [
   {
-    "module_name": "upmaru/instellar/aws",
+    "module_name": "upmaru/instellar/aws//modules/network",
     "category_name": "foundation",
     "services": ["vpc"],
     "tier": "production",
