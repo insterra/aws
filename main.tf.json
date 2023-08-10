@@ -1,9 +1,6 @@
 {
   "variable": {
     "identifier": {},
-    "provider_name": {
-      "default": "aws"
-    },
     "aws_region": {},
     "aws_access_key": {},
     "aws_secret_key": {},
@@ -108,7 +105,7 @@
       "version": "~> 0.5",
       "cluster_name": "${module.compute_primary.identifier}",
       "region": "${var.aws_region}",
-      "provider_name": "${var.provider_name}",
+      "provider_name": "aws",
       "cluster_address": "${module.compute_primary.cluster_address}",
       "password_token": "${module.compute_primary.trust_token}",
       "uplink_channel": "develop",
@@ -120,7 +117,7 @@
       "version": "~> 0.5",
       "cluster_name": "${module.compute_secondary.identifier}",
       "region": "${var.aws_region}",
-      "provider_name": "${var.provider_name}",
+      "provider_name": "aws",
       "cluster_address": "${module.compute_secondary.cluster_address}",
       "password_token": "${module.compute_secondary.trust_token}",
       "uplink_channel": "develop",
@@ -131,7 +128,7 @@
       "source": "upmaru/bootstrap/instellar//modules/service",
       "version": "~> 0.5",
       "slug": "${module.database_postgresql.identifier}",
-      "provider_name": "${var.provider_name}",
+      "provider_name": "aws",
       "driver": "database/postgresql",
       "driver_version": "${module.database_postgresql.engine_version}",
       "cluster_ids": [

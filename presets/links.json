@@ -33,8 +33,10 @@
     "name": "postgresql-dev",
     "attributes": {
       "driver": "database/postgresql",
-      "driver_version": null,
-      "channels": []
+      "channels": ["develop"],
+      "credential": {
+        "secure": true
+      }
     }
   },
   {
@@ -45,7 +47,6 @@
     "name": "postgresql-prod",
     "attributes": {
       "driver": "database/postgresql",
-      "driver_version": null,
       "channels": ["main", "master"]
     }
   }
