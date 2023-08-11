@@ -1,9 +1,21 @@
-{
-  "name": "aws-bootstrap",
-  "preset_references": [
-    {"category_name": "storage", "name": "base"},
-    {"category_name": "foundation", "name": "starter"},
-    {"category_name": "compute", "name": "starter"},
-    {"category_name": "database", "name": "postgresql-starter"}
-  ]
-}
+[
+  {
+    "name": "aws-bootstrap",
+    "preset_references": [
+      {"category_name": "storage", "name": "base"},
+      {"category_name": "foundation", "name": "starter"},
+      {"category_name": "compute", "name": "starter"},
+      {"category_name": "database", "name": "postgresql-starter"}
+    ]
+  },
+  {
+    "name": "aws-dual-compute",
+    "preset_references": [
+      {"category_name": "storage", "name": "base"},
+      {"category_name": "foundation", "name": "starter"},
+      {"category_name": "compute", "name": "starter"},
+      {"category_name": "compute", "name": "starter"},
+      {"category_name": "database", "name": "postgresql-starter"}
+    ]
+  }
+]
