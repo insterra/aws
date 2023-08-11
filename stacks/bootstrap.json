@@ -1,21 +1,64 @@
 [
   {
     "name": "aws-bootstrap",
-    "preset_references": [
-      {"category_name": "storage", "name": "base"},
-      {"category_name": "foundation", "name": "starter"},
-      {"category_name": "compute", "name": "starter"},
-      {"category_name": "database", "name": "postgresql-starter"}
+    "components": [
+      {
+        "category_name": "storage", 
+        "module_name": "upmaru/instellar/aws//modules/storage", 
+        "name": "base"
+      },
+      {
+        "category_name": "foundation", 
+        "module_name": "upmaru/instellar/aws//modules/network", 
+        "name": "starter"
+      },
+      {
+        "category_name": "compute", 
+        "module_name": "upmaru/instellar/aws", 
+        "name": "starter"
+      },
+      {
+        "category_name": "database", 
+        "module_name": "upmaru/instellar/aws//modules/database", 
+        "name": "postgresql-starter"
+      }
     ]
   },
   {
     "name": "aws-dual-compute",
-    "preset_references": [
-      {"category_name": "storage", "name": "base"},
-      {"category_name": "foundation", "name": "starter"},
-      {"category_name": "compute", "name": "starter"},
-      {"category_name": "compute", "name": "starter"},
-      {"category_name": "database", "name": "postgresql-starter"}
+    "components": [
+      {
+        "category_name": "storage", 
+        "module_name": "upmaru/instellar/aws//modules/storage", 
+        "name": "base"
+      },
+      {
+        "category_name": "foundation", 
+        "module_name": "upmaru/instellar/aws//modules/network", 
+        "name": "starter"
+      },
+      {
+        "category_name": "compute", 
+        "module_name": "upmaru/instellar/aws", 
+        "name": "starter"
+      },
+      {
+        "category_name": "compute",
+        "module_name": "upmaru/instellar/aws", 
+        "name": "starter", 
+        "attributes": {
+          "node_size": "t3a.large",
+          "cluster_topology": [
+            {"id": 1, "name": "01", "size": "t3a.large"},
+            {"id": 2, "name": "02", "size": "t3a.large"}
+          ]
+        }
+      },
+      {
+        "category_name": "database", 
+        "module_name": "upmaru/instellar/aws//modules/database", 
+        "name": "postgresql-starter"
+      }
     ]
   }
 ]
