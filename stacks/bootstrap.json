@@ -10,7 +10,7 @@
       {
         "category_name": "foundation", 
         "module_name": "upmaru/instellar/aws//modules/network", 
-        "name": "starter"
+        "name": "base"
       },
       {
         "category_name": "compute", 
@@ -35,7 +35,7 @@
       {
         "category_name": "foundation", 
         "module_name": "upmaru/instellar/aws//modules/network", 
-        "name": "starter"
+        "name": "base"
       },
       {
         "category_name": "compute", 
