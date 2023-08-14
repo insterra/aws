@@ -1,0 +1,12 @@
+[
+  {
+    "category_name": "link", 
+    "module_name": "upmaru/bootstrap/instellar", 
+    "key": "cluster_id",
+    "with": {
+      "category_name": "compute",
+      "module_name": "upmaru/instellar/aws",
+      "key": "nodes_security_group_id"
+    }
+  }
+]
