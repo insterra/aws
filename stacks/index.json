@@ -3,6 +3,7 @@
     "name": "aws-bootstrap",
     "organization_name": "upmaru",
     "visibility": "public",
+    "description": "Great starting point for initial setup.",
     "components": [
       {
         "category_name": "storage", 
@@ -29,6 +30,7 @@
   {
     "name": "aws-dual-compute",
     "organization_name": "upmaru",
+    "description": "Provides two compute clusters, and a database.",
     "components": [
       {
         "category_name": "storage", 
