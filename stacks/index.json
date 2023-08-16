@@ -1,6 +1,8 @@
 [
   {
     "name": "aws-bootstrap",
+    "organization_name": "upmaru",
+    "visibility": "public",
     "components": [
       {
         "category_name": "storage", 
@@ -26,6 +28,7 @@
   },
   {
     "name": "aws-dual-compute",
+    "organization_name": "upmaru",
     "components": [
       {
         "category_name": "storage", 
