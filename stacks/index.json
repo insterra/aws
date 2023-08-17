@@ -13,17 +13,19 @@
       {
         "category_name": "foundation", 
         "module_name": "upmaru/instellar/aws//modules/network", 
-        "name": "base"
-      },
-      {
-        "category_name": "compute", 
-        "module_name": "upmaru/instellar/aws", 
-        "name": "starter"
-      },
-      {
-        "category_name": "database", 
-        "module_name": "upmaru/instellar/aws//modules/database", 
-        "name": "postgresql-starter"
+        "name": "base",
+        "children": [
+          {
+            "category_name": "compute", 
+            "module_name": "upmaru/instellar/aws", 
+            "name": "starter"
+          },
+          {
+            "category_name": "database", 
+            "module_name": "upmaru/instellar/aws//modules/database", 
+            "name": "postgresql-starter"
+          }
+        ]
       }
     ]
   },
@@ -40,29 +42,31 @@
       {
         "category_name": "foundation", 
         "module_name": "upmaru/instellar/aws//modules/network", 
-        "name": "base"
-      },
-      {
-        "category_name": "compute", 
-        "module_name": "upmaru/instellar/aws", 
-        "name": "starter"
-      },
-      {
-        "category_name": "compute",
-        "module_name": "upmaru/instellar/aws", 
-        "name": "starter", 
-        "attributes": {
-          "node_size": "t3a.large",
-          "cluster_topology": [
-            {"id": 1, "name": "01", "size": "t3a.large"},
-            {"id": 2, "name": "02", "size": "t3a.large"}
-          ]
-        }
-      },
-      {
-        "category_name": "database", 
-        "module_name": "upmaru/instellar/aws//modules/database", 
-        "name": "postgresql-starter"
+        "name": "base",
+        "children": [
+          {
+            "category_name": "compute", 
+            "module_name": "upmaru/instellar/aws", 
+            "name": "starter"
+          },
+          {
+            "category_name": "compute",
+            "module_name": "upmaru/instellar/aws", 
+            "name": "starter", 
+            "attributes": {
+              "node_size": "t3a.large",
+              "cluster_topology": [
+                {"id": 1, "name": "01", "size": "t3a.large"},
+                {"id": 2, "name": "02", "size": "t3a.large"}
+              ]
+            }
+          },
+          {
+            "category_name": "database", 
+            "module_name": "upmaru/instellar/aws//modules/database", 
+            "name": "postgresql-starter"
+          }
+        ]
       }
     ]
   }
