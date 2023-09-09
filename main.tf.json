@@ -35,7 +35,7 @@
     "compute_primary": {
       "source": "upmaru/instellar/aws",
       "version": "~> 0.6",
-      "vpc_id": "${module.networking_base.vpc_id}",
+      "vpc_id": "${module.networking_foundation.vpc_id}",
       "public_subnet_ids": "${module.networking_foundation.public_subnet_ids}",
       "vpc_ip_range": "${module.networking_foundation.vpc_ip_range}",
       "network_dependencies": "${module.networking_foundation.dependencies}",
