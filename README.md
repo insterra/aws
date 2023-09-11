@@ -8,12 +8,8 @@ This is a catalog of all the supported `blocks` for insterra. The format for the
 
 - [x] Storage
   - [x] S3 Bucket
-- [x] Foundation
+- [x] Networking
   - [x] VPC
-  - [x] Cluster
-    - [x] Bastion Node
-    - [x] Bootstrap Node
-    - [x] Expandable Compute Topology
 - [x] Compute
   - [x] Cluster
     - [x] Bastion Node

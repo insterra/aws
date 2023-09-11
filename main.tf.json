@@ -24,7 +24,7 @@
       "version": "~> 0.6",
       "bucket_name": "${var.identifier}"
     },
-    "foundation_network": {
+    "networking_foundation": {
       "source": "upmaru/instellar/aws//modules/network",
       "version": "~> 0.6",
       "identifier": "${var.identifier}",
@@ -35,10 +35,10 @@
     "compute_primary": {
       "source": "upmaru/instellar/aws",
       "version": "~> 0.6",
-      "vpc_id": "${module.foundation_network.vpc_id}",
-      "public_subnet_ids": "${module.foundation_network.public_subnet_ids}",
-      "vpc_ip_range": "${module.foundation_network.vpc_ip_range}",
-      "network_dependencies": "${module.foundation_network.dependencies}",
+      "vpc_id": "${module.networking_foundation.vpc_id}",
+      "public_subnet_ids": "${module.networking_foundation.public_subnet_ids}",
+      "vpc_ip_range": "${module.networking_foundation.vpc_ip_range}",
+      "network_dependencies": "${module.networking_foundation.dependencies}",
       "identifier": "orion",
       "node_size": "t3a.medium",
       "cluster_topology": [
@@ -55,10 +55,10 @@
     "compute_secondary": {
       "source": "upmaru/instellar/aws",
       "version": "~> 0.6",
-      "vpc_id": "${module.foundation_network.vpc_id}",
-      "public_subnet_ids": "${module.foundation_network.public_subnet_ids}",
-      "vpc_ip_range": "${module.foundation_network.vpc_ip_range}",
-      "network_dependencies": "${module.foundation_network.dependencies}",
+      "vpc_id": "${module.networking_foundation.vpc_id}",
+      "public_subnet_ids": "${module.networking_foundation.public_subnet_ids}",
+      "vpc_ip_range": "${module.networking_foundation.vpc_ip_range}",
+      "network_dependencies": "${module.networking_foundation.dependencies}",
       "identifier": "milkyway",
       "node_size": "t3a.medium",
       "cluster_topology": [
@@ -82,12 +82,12 @@
       "engine": "postgres",
       "engine_version": "15",
       "port": 5432,
-      "subnet_ids": "${module.foundation_network.public_subnet_ids}",
+      "subnet_ids": "${module.networking_foundation.public_subnet_ids}",
       "security_group_ids": [
         "${module.compute_primary.nodes_security_group_id}",
         "${module.compute_secondary.nodes_security_group_id}"
       ],
-      "vpc_id": "${module.foundation_network.vpc_id}",
+      "vpc_id": "${module.networking_foundation.vpc_id}",
       "deletion_protection": false,
       "skip_final_snapshot": true
     },

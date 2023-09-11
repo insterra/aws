@@ -11,7 +11,7 @@
         "name": "base"
       },
       {
-        "category_name": "foundation", 
+        "category_name": "networking", 
         "module_name": "upmaru/instellar/aws//modules/network", 
         "name": "base",
         "children": [
@@ -40,7 +40,7 @@
         "name": "base"
       },
       {
-        "category_name": "foundation", 
+        "category_name": "networking", 
         "module_name": "upmaru/instellar/aws//modules/network", 
         "name": "base",
         "children": [
