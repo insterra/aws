@@ -47,7 +47,10 @@
     "name": "postgresql-prod",
     "attributes": {
       "driver": "database/postgresql",
-      "channels": ["main", "master"]
+      "channels": ["main", "master"],
+      "credential": {
+        "secure": true
+      }
     }
   }
 ]
