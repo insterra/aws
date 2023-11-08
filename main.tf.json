@@ -85,6 +85,7 @@
       "subnet_ids": "${module.networking_foundation.public_subnet_ids}",
       "security_group_ids": [
         "${module.compute_primary.nodes_security_group_id}",
+        "${module.compute_primary.bastion_security_group_id}",
         "${module.compute_secondary.nodes_security_group_id}"
       ],
       "vpc_id": "${module.networking_foundation.vpc_id}",
