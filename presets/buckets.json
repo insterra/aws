@@ -1,0 +1,11 @@
+[
+  {
+    "module_name": "upmaru/instellar/aws//modules/bucket",
+    "category_name": "bucket",
+    "services": ["aws", "s3"],
+    "tier": "development",
+    "name": "s3-starter",
+    "attributes": {
+    }
+  }
+]
