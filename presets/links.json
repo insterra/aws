@@ -52,5 +52,33 @@
         "secure": true
       }
     }
+  },
+  {
+    "module_name": "upmaru/bootstrap/instellar//modules/service",
+    "category_name": "link",
+    "services": ["aws", "s3"],
+    "tier": "development",
+    "name": "aws-s3-dev",
+    "attributes": {
+      "driver": "bucket/aws-s3",
+      "channels": ["develop"],
+      "credential": {
+        "secure": true
+      }
+    }
+  },
+  {
+    "module_name": "upmaru/bootstrap/instellar//modules/service",
+    "category_name": "link",
+    "services": ["aws", "s3"],
+    "tier": "production",
+    "name": "aws-s3-prod",
+    "attributes": {
+      "driver": "bucket/aws-s3",
+      "channels": ["main", "master"],
+      "credential": {
+        "secure": true
+      }
+    }
   }
 ]
