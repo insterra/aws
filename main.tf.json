@@ -41,6 +41,7 @@
       "network_dependencies": "${module.networking_foundation.dependencies}",
       "identifier": "orion",
       "node_size": "t3a.medium",
+      "bastion_size": "t3a.micro",
       "cluster_topology": [
         {"id": 1, "name": "01", "size": "t3a.medium"},
         {"id": 2, "name": "02", "size": "t3a.medium"}
@@ -60,6 +61,7 @@
       "vpc_ip_range": "${module.networking_foundation.vpc_ip_range}",
       "network_dependencies": "${module.networking_foundation.dependencies}",
       "identifier": "milkyway",
+      "bastion_size": "t3a.micro",
       "node_size": "t3a.medium",
       "cluster_topology": [
         {"id": 1, "name": "01", "size": "t3a.medium"},
