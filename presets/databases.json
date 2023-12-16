@@ -3,7 +3,7 @@
     "module_name": "upmaru/instellar/aws//modules/database",
     "category_name": "database",
     "services": ["postgresql", "rds"],
-    "tier": "development",
+    "tier": "production",
     "name": "postgresql-starter",
     "attributes":  {
       "db_size": "db.t3.small",
@@ -12,8 +12,8 @@
       "engine_version": "15",
       "port": 5432,
       "db_username": "instellar",
-      "deletion_protection": false,
-      "skip_final_snapshot": true
+      "deletion_protection": true,
+      "skip_final_snapshot": false
     }
   }
 ]
