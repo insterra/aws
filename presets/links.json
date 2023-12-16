@@ -2,7 +2,7 @@
   {
     "module_name": "upmaru/bootstrap/instellar//modules/storage",
     "category_name": "link",
-    "services": ["s3"],
+    "services": ["s3-storage"],
     "tier": "production",
     "name": "storage",
     "attributes": {}
