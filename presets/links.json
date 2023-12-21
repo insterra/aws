@@ -14,7 +14,8 @@
     "tier": "development",
     "name": "compute-development",
     "attributes": {
-      "uplink_channel": "develop"
+      "uplink_channel": "develop",
+      "kit_slug": "lite"
     }
   },
   {
