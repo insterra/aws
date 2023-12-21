@@ -78,6 +78,7 @@
       "source": "upmaru/instellar/aws//modules/database",
       "version": "~> 0.7",
       "identifier": "perceptual",
+      "region": "${var.aws_region}",
       "db_size": "db.t3.small",
       "db_name": "instellardb",
       "db_username": "instellar",
@@ -102,7 +103,7 @@
     },
     "link_storage_s3": {
       "source": "upmaru/bootstrap/instellar//modules/storage",
-      "version": "~> 0.5",
+      "version": "~> 0.6",
       "bucket": "${module.storage_s3.name}",
       "region": "${var.aws_region}",
       "host": "${module.storage_s3.host}",
@@ -111,7 +112,7 @@
     },
     "link_compute_primary": {
       "source": "upmaru/bootstrap/instellar",
-      "version": "~> 0.5",
+      "version": "~> 0.6",
       "cluster_name": "${module.compute_primary.identifier}",
       "region": "${var.aws_region}",
       "provider_name": "aws",
@@ -123,7 +124,7 @@
     },
     "link_compute_secondary": {
       "source": "upmaru/bootstrap/instellar",
-      "version": "~> 0.5",
+      "version": "~> 0.6",
       "cluster_name": "${module.compute_secondary.identifier}",
       "region": "${var.aws_region}",
       "provider_name": "aws",
@@ -135,7 +136,7 @@
     },
     "link_database_postgresql": {
       "source": "upmaru/bootstrap/instellar//modules/service",
-      "version": "~> 0.5",
+      "version": "~> 0.6",
       "slug": "${module.database_postgresql.identifier}",
       "provider_name": "aws",
       "driver": "database/postgresql",
@@ -145,6 +146,7 @@
         "${module.link_compute_secondary.cluster_id}"
       ],
       "channels": ["develop", "master"],
+      "certificate": "${module.database_postgresql.certificate_url}",
       "credential": {
         "username": "${module.database_postgresql.username}",
         "password": "${module.database_postgresql.password}",
@@ -156,7 +158,7 @@
     },
     "link_bucket_aws": {
       "source": "upmaru/bootstrap/instellar//modules/service",
-      "version": "~> 0.5",
+      "version": "~> 0.6",
       "slug": "${module.bucket_generator.identifier}",
       "provider_name": "aws",
       "driver": "database/aws-s3",
