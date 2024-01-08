@@ -119,6 +119,7 @@
       "cluster_address": "${module.compute_primary.cluster_address}",
       "password_token": "${module.compute_primary.trust_token}",
       "uplink_channel": "develop",
+      "kit_slug": "lite",
       "bootstrap_node": "${module.compute_primary.bootstrap_node}",
       "nodes": "${module.compute_primary.nodes}"
     },
@@ -131,6 +132,7 @@
       "cluster_address": "${module.compute_secondary.cluster_address}",
       "password_token": "${module.compute_secondary.trust_token}",
       "uplink_channel": "develop",
+      "kit_slug": "pro",
       "bootstrap_node": "${module.compute_secondary.bootstrap_node}",
       "nodes": "${module.compute_secondary.nodes}"
     },
