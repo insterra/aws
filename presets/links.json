@@ -24,7 +24,9 @@
     "services": ["ec2"],
     "tier": "production",
     "name": "compute-production",
-    "attributes": {}
+    "attributes": {
+      "kit_slug": "lite"
+    }
   },
   {
     "module_name": "upmaru/bootstrap/instellar//modules/service",
