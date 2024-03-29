@@ -186,7 +186,7 @@
       "version": "~> 0.8",
       "slug": "${module.bucket_generator.identifier}",
       "provider_name": "aws",
-      "driver": "database/aws-s3",
+      "driver": "bucket/aws-s3",
       "driver_version": "${module.bucket_generator.version}",
       "cluster_ids": [
         "${module.link_compute_primary.cluster_id}",
