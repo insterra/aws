@@ -48,7 +48,7 @@
       "bastion_ssh": true,
       "balancer": true,
       "balancer_ssh": true,
-      "balancer_deletion_protection": true,
+      "balancer_deletion_protection": false,
       "node_detail_revision": 1,
       "cluster_topology": [
         {"id": 1, "name": "01", "size": "t3a.medium"},
@@ -75,7 +75,7 @@
       "bastion_ssh": true,
       "balancer": true,
       "balancer_ssh": true,
-      "balancer_deletion_protection": true,
+      "balancer_deletion_protection": false,
       "node_detail_revision": 1,
       "cluster_topology": [
         {"id": 1, "name": "01", "size": "t3a.medium"},
