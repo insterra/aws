@@ -21,27 +21,35 @@
   "module": {
     "storage_s3": {
       "source": "upmaru/instellar/aws//modules/storage",
-      "version": "~> 0.7",
-      "bucket_name": "${var.identifier}"
+      "version": "~> 0.8",
+      "bucket_name": "${var.identifier}",
+      "blueprint": "${var.identifier}"
     },
     "networking_foundation": {
       "source": "upmaru/instellar/aws//modules/network",
-      "version": "~> 0.7",
+      "version": "~> 0.8",
       "identifier": "${var.identifier}",
+      "blueprint": "${var.identifier}",
       "region": "${var.aws_region}",
       "vpc_ip_range": "10.0.0.0/16",
       "public_subnet_cidrs": ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
     },
     "compute_primary": {
       "source": "upmaru/instellar/aws",
-      "version": "~> 0.7",
+      "version": "~> 0.8",
       "vpc_id": "${module.networking_foundation.vpc_id}",
       "public_subnet_ids": "${module.networking_foundation.public_subnet_ids}",
       "vpc_ip_range": "${module.networking_foundation.vpc_ip_range}",
       "network_dependencies": "${module.networking_foundation.dependencies}",
       "identifier": "orion",
+      "blueprint": "${var.identifier}",
       "node_size": "t3a.medium",
       "bastion_size": "t3a.micro",
+      "bastion_ssh": true,
+      "balancer": false,
+      "balancer_ssh": true,
+      "balancer_deletion_protection": true,
+      "node_detail_revision": 1,
       "cluster_topology": [
         {"id": 1, "name": "01", "size": "t3a.medium"},
         {"id": 2, "name": "02", "size": "t3a.medium"}
@@ -55,14 +63,20 @@
     },
     "compute_secondary": {
       "source": "upmaru/instellar/aws",
-      "version": "~> 0.7",
+      "version": "~> 0.8",
       "vpc_id": "${module.networking_foundation.vpc_id}",
       "public_subnet_ids": "${module.networking_foundation.public_subnet_ids}",
       "vpc_ip_range": "${module.networking_foundation.vpc_ip_range}",
       "network_dependencies": "${module.networking_foundation.dependencies}",
       "identifier": "milkyway",
-      "bastion_size": "t3a.micro",
+      "blueprint": "${var.identifier}",
       "node_size": "t3a.medium",
+      "bastion_size": "t3a.micro",
+      "bastion_ssh": true,
+      "balancer": false,
+      "balancer_ssh": true,
+      "balancer_deletion_protection": true,
+      "node_detail_revision": 1,
       "cluster_topology": [
         {"id": 1, "name": "01", "size": "t3a.medium"},
         {"id": 2, "name": "02", "size": "t3a.medium"}
@@ -76,8 +90,9 @@
     },
     "database_postgresql": {
       "source": "upmaru/instellar/aws//modules/database",
-      "version": "~> 0.7",
+      "version": "~> 0.8",
       "identifier": "perceptual",
+      "blueprint": "${var.identifier}",
       "region": "${var.aws_region}",
       "db_size": "db.t3.small",
       "db_name": "instellardb",
@@ -97,13 +112,14 @@
     },
     "bucket_generator": {
       "source": "upmaru/instellar/aws//modules/bucket",
-      "version": "~> 0.7",
+      "version": "~> 0.8",
       "identifier": "bucketeer",
+      "blueprint": "${var.identifier}",
       "region": "${var.aws_region}"
     },
     "link_storage_s3": {
       "source": "upmaru/bootstrap/instellar//modules/storage",
-      "version": "~> 0.6",
+      "version": "~> 0.8",
       "bucket": "${module.storage_s3.name}",
       "region": "${var.aws_region}",
       "host": "${module.storage_s3.host}",
@@ -112,7 +128,7 @@
     },
     "link_compute_primary": {
       "source": "upmaru/bootstrap/instellar",
-      "version": "~> 0.6",
+      "version": "~> 0.8",
       "cluster_name": "${module.compute_primary.identifier}",
       "region": "${var.aws_region}",
       "provider_name": "aws",
@@ -121,11 +137,12 @@
       "uplink_channel": "develop",
       "kit_slug": "lite",
       "bootstrap_node": "${module.compute_primary.bootstrap_node}",
-      "nodes": "${module.compute_primary.nodes}"
+      "nodes": "${module.compute_primary.nodes}",
+      "balancer": "${module.compute_primary.balancer}"
     },
     "link_compute_secondary": {
       "source": "upmaru/bootstrap/instellar",
-      "version": "~> 0.6",
+      "version": "~> 0.8",
       "cluster_name": "${module.compute_secondary.identifier}",
       "region": "${var.aws_region}",
       "provider_name": "aws",
@@ -134,11 +151,12 @@
       "uplink_channel": "develop",
       "kit_slug": "pro",
       "bootstrap_node": "${module.compute_secondary.bootstrap_node}",
-      "nodes": "${module.compute_secondary.nodes}"
+      "nodes": "${module.compute_secondary.nodes}",
+      "balancer": "${module.compute_secondary.balancer}"
     },
     "link_database_postgresql": {
       "source": "upmaru/bootstrap/instellar//modules/service",
-      "version": "~> 0.6",
+      "version": "~> 0.8",
       "slug": "${module.database_postgresql.identifier}",
       "provider_name": "aws",
       "driver": "database/postgresql",
@@ -160,7 +178,7 @@
     },
     "link_bucket_aws": {
       "source": "upmaru/bootstrap/instellar//modules/service",
-      "version": "~> 0.6",
+      "version": "~> 0.8",
       "slug": "${module.bucket_generator.identifier}",
       "provider_name": "aws",
       "driver": "database/aws-s3",
