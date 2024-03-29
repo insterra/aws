@@ -106,6 +106,10 @@
         "${module.compute_primary.bastion_security_group_id}",
         "${module.compute_secondary.nodes_security_group_id}"
       ],
+      "nodes_iam_roles": [
+        "${module.compute_primary.nodes_iam_role}",
+        "${module.compute_secondary.nodes_iam_role}"
+      ],
       "vpc_id": "${module.networking_foundation.vpc_id}",
       "deletion_protection": false,
       "skip_final_snapshot": true
