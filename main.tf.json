@@ -101,6 +101,7 @@
       "engine_version": "15",
       "port": 5432,
       "subnet_ids": "${module.networking_foundation.public_subnet_ids}",
+      "manage_credential_with_secret": true,
       "security_group_ids": [
         "${module.compute_primary.nodes_security_group_id}",
         "${module.compute_primary.bastion_security_group_id}",
