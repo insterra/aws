@@ -58,7 +58,7 @@
       "storage_size": 40,
       "ssh_keys": [
         "zack-studio",
-        "zack-one-eight"
+        "zack-mbp"
       ]
     },
     "compute_secondary": {
@@ -85,7 +85,7 @@
       "storage_size": 40,
       "ssh_keys": [
         "zack-studio",
-        "zack-one-eight"
+        "zack-mbp"
       ]
     },
     "database_postgresql": {
