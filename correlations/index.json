@@ -8,15 +8,5 @@
       "module_name": "upmaru/instellar/aws",
       "key": "nodes_security_group_id"
     }
-  },
-  {
-    "category_name": "database",
-    "module_name": "upmaru/instellar/aws//modules/database",
-    "key": "nodes_iam_role",
-    "with": {
-      "category_name": "compute",
-      "module_name": "upmaru/instellar/aws",
-      "key": "nodes_security_group_id"
-    }
   }
 ]
