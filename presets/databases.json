@@ -13,7 +13,8 @@
       "port": 5432,
       "db_username": "instellar",
       "deletion_protection": true,
-      "skip_final_snapshot": false
+      "skip_final_snapshot": false,
+      "manage_credential_with_secret": false
     }
   },
   {
@@ -30,7 +31,8 @@
       "port": 5432,
       "db_username": "instellar",
       "deletion_protection": false,
-      "skip_final_snapshot": true
+      "skip_final_snapshot": true,
+      "manage_credential_with_secret": false
     }
   }
 ]
