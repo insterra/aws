@@ -49,6 +49,8 @@
       "balancer": true,
       "balancer_ssh": true,
       "balancer_deletion_protection": false,
+      "publicly_accessible": true,
+      "ssm": true,
       "node_detail_revision": 1,
       "cluster_topology": [
         {"id": 1, "name": "01", "size": "t3a.medium"},
@@ -76,6 +78,8 @@
       "balancer": true,
       "balancer_ssh": true,
       "balancer_deletion_protection": false,
+      "publicly_accessible": true,
+      "ssm": true,
       "node_detail_revision": 1,
       "cluster_topology": [
         {"id": 1, "name": "01", "size": "t3a.medium"},

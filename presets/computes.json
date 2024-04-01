@@ -7,10 +7,12 @@
     "name": "starter",
     "attributes": {
       "bastion_size": "t3a.micro",
+      "ssm": true,
       "bastion_ssh": true,
       "balancer": false,
       "balancer_ssh": true,
       "balancer_deletion_protection": true,
+      "publicly_accessible": true,
       "node_detail_revision": 1,
       "node_size": "t3a.medium",
       "cluster_topology": [
@@ -30,10 +32,12 @@
     "name": "starter-dev",
     "attributes": {
       "bastion_size": "t3a.micro",
+      "ssm": false,
       "bastion_ssh": true,
       "balancer": false,
       "balancer_ssh": true,
       "balancer_deletion_protection": false,
+      "publicly_accessible": true,
       "node_detail_revision": 1,
       "node_size": "t3a.medium",
       "cluster_topology": [
