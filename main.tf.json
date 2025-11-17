@@ -55,15 +55,12 @@
       "ssm": true,
       "node_detail_revision": 1,
       "cluster_topology": [
-        {"id": 1, "name": "01", "size": "t3a.medium"},
-        {"id": 2, "name": "02", "size": "t3a.medium"}
+        { "id": 1, "name": "01", "size": "t3a.medium" },
+        { "id": 2, "name": "02", "size": "t3a.medium" }
       ],
       "volume_type": "gp3",
       "storage_size": 40,
-      "ssh_keys": [
-        "zack-studio",
-        "zack-mbp"
-      ]
+      "ssh_keys": ["zack-studio", "zack-mbp"]
     },
     "compute_secondary": {
       "source": "upmaru/instellar/aws",
@@ -86,15 +83,12 @@
       "ssm": true,
       "node_detail_revision": 1,
       "cluster_topology": [
-        {"id": 1, "name": "01", "size": "t3a.medium"},
-        {"id": 2, "name": "02", "size": "t3a.medium"}
+        { "id": 1, "name": "01", "size": "t3a.medium" },
+        { "id": 2, "name": "02", "size": "t3a.medium" }
       ],
       "volume_type": "gp3",
       "storage_size": 40,
-      "ssh_keys": [
-        "zack-studio",
-        "zack-mbp"
-      ]
+      "ssh_keys": ["zack-studio", "zack-mbp"]
     },
     "database_postgresql": {
       "source": "upmaru/instellar/aws//modules/database",
@@ -121,6 +115,8 @@
       ],
       "vpc_id": "${module.networking_foundation.vpc_id}",
       "deletion_protection": false,
+      "storage_size": 20,
+      "max_storage_size": 100,
       "skip_final_snapshot": true
     },
     "bucket_generator": {
