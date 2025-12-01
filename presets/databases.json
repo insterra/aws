@@ -16,7 +16,9 @@
       "storage_size": 20,
       "max_storage_size": 100,
       "skip_final_snapshot": false,
-      "manage_credential_with_secret": false
+      "manage_credential_with_secret": false,
+      "multi_az": false,
+      "apply_immediately": false
     }
   },
   {
@@ -36,7 +38,9 @@
       "storage_size": 20,
       "max_storage_size": 100,
       "skip_final_snapshot": true,
-      "manage_credential_with_secret": false
+      "manage_credential_with_secret": false,
+      "multi_az": false,
+      "apply_immediately": false
     }
   }
 ]

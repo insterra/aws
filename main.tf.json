@@ -117,6 +117,8 @@
       "deletion_protection": false,
       "storage_size": 20,
       "max_storage_size": 100,
+      "multi_az": false,
+      "apply_immediately": false,
       "skip_final_snapshot": true
     },
     "bucket_generator": {
